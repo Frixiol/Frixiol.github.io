@@ -1,23 +1,49 @@
 {
   "name": "frixiol.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "homepage": "https://frixiol.github.io",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "firebase": "^8.10.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^3.0.5",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
-    "dev": "npx tailwindcss -i ./public/css/style.css -o ./public/css/tailwind.css --watch"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build master",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Frixiol/Frixiol.github.io.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Frixiol/Frixiol.github.io/issues"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "homepage": "https://github.com/Frixiol/Frixiol.github.io#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.11",
+    "gh-pages": "^4.0.0",
+    "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8"
   }
 }
